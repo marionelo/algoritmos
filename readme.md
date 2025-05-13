@@ -181,3 +181,352 @@ Este repositorio incluye un archivo de pruebas con PHPUnit para garantizar el fu
 - PHP 8.0+
     
 - PHPUnit 9+
+
+
+
+# Queue (Cola)
+
+## Definición
+Una **cola** es una estructura de datos que sigue el principio **FIFO** (*First In, First Out*), lo que significa que el primer elemento en entrar es el primero en salir.
+
+## Operaciones principales
+
+| Operación | Descripción | Complejidad Big O |
+|---------------|----------------------------------------|-------------------|
+| `enqueue()` | Inserta un elemento al final de la cola| O(1) |
+| `dequeue()` | Elimina y retorna el primer elemento | O(1) |
+| `peek()` | Muestra el primer elemento sin sacarlo | O(1) |
+| `isEmpty()` | Verifica si la cola está vacía | O(1) |
+| `size()` | Retorna el número de elementos | O(1) |
+| `clear()` | Vacía la cola | O(1) |
+
+## Ejemplo de uso
+
+```php
+use DataStructures\Queue;
+
+$queue = new Queue();
+$queue->enqueue("uno");
+$queue->enqueue("dos");
+echo $queue->dequeue(); // uno
+```
+
+## Casos de uso comunes
+
+- Impresión de documentos
+- Procesamiento por lotes
+- Sistemas de mensajería
+- Control de tareas en sistemas operativos
+
+## Pruebas unitarias
+
+Este repositorio incluye pruebas automatizadas con PHPUnit para asegurar el correcto funcionamiento de la clase `Queue`.
+
+bash
+CopiarEditar
+
+`./vendor/bin/phpunit tests/QueueTest.php`
+
+## Requisitos
+
+- PHP 8.0+
+- PHPUnit 9+## Casos de uso comunes
+
+- Impresión de documentos
+- Procesamiento por lotes
+- Sistemas de mensajería
+- Control de tareas en sistemas operativos
+
+## Pruebas unitarias
+
+Este repositorio incluye pruebas automatizadas con PHPUnit para asegurar el correcto funcionamiento de la clase `Queue`.
+
+bash
+CopiarEditar
+
+`./vendor/bin/phpunit tests/QueueTest.php`
+
+## Requisitos
+
+- PHP 8.0+
+- PHPUnit 9+
+
+----
+
+
+# Linked List (Lista Enlazada)
+
+## Definición
+
+Una **lista enlazada** es una estructura de datos lineal donde cada elemento (nodo) contiene un valor y una referencia al siguiente nodo en la secuencia.
+
+## Operaciones principales
+
+|Operación|Descripción|Complejidad Big O|
+|---|---|---|
+|`insertAtBeginning()`|Inserta un nodo al inicio|O(1)|
+|`insertAtEnd()`|Inserta un nodo al final|O(n)|
+|`remove()`|Elimina el nodo que contiene cierto valor|O(n)|
+|`contains()`|Verifica si un valor está en la lista|O(n)|
+|`toArray()`|Devuelve la lista como arreglo|O(n)|
+|`size()`|Retorna el número de nodos|O(1)|
+|`isEmpty()`|Verifica si la lista está vacía|O(1)|
+
+## Ejemplo de uso
+
+```php
+use DataStructures\LinkedList;
+
+$list = new LinkedList();
+$list->insertAtBeginning("C");
+$list->insertAtBeginning("B");
+$list->insertAtBeginning("A");
+print_r($list->toArray()); // ["A", "B", "C"]
+```
+
+## Casos de uso comunes
+
+- Implementación de pilas y colas
+    
+- Manejo de memoria eficiente sin realocación
+    
+- Representación de grafos
+    
+- Almacenamiento de datos dinámicos
+    
+
+## Pruebas unitarias
+
+Este repositorio incluye pruebas con PHPUnit para verificar la funcionalidad de la clase `LinkedList`.
+
+```bash
+./vendor/bin/phpunit tests/LinkedListTest.php
+```
+
+## Requisitos
+
+- PHP 8.0+
+    
+- PHPUnit 9+
+
+
+
+-----
+
+
+# HashMap (Mapa de Hash / Diccionario)
+
+## Definición
+
+Una **HashMap** es una estructura de datos que permite almacenar pares clave-valor, permitiendo un acceso extremadamente rápido a los valores mediante su clave.
+
+## Operaciones principales
+
+|Operación|Descripción|Complejidad Big O promedio|
+|---|---|---|
+|`set()`|Asigna un valor a una clave|O(1)|
+|`get()`|Obtiene el valor asociado a una clave|O(1)|
+|`has()`|Verifica si la clave existe|O(1)|
+|`delete()`|Elimina una clave y su valor|O(1)|
+|`keys()`|Devuelve todas las claves almacenadas|O(n)|
+|`values()`|Devuelve todos los valores almacenados|O(n)|
+
+## Ejemplo de uso
+
+```php
+use DataStructures\HashMap;
+
+$map = new HashMap();
+$map->set("nombre", "Mario");
+$map->set("edad", 30);
+echo $map->get("nombre"); // Mario
+```
+
+## Casos de uso comunes
+
+- Tablas de búsqueda
+    
+- Índices en bases de datos
+    
+- Representación de datos tipo JSON
+    
+- Contadores de frecuencia
+    
+
+## Pruebas unitarias
+
+Este repositorio incluye pruebas con PHPUnit para validar el comportamiento de la clase `HashMap`.
+
+```bash
+./vendor/bin/phpunit tests/HashMapTest.php
+```
+
+## Requisitos
+
+- PHP 8.0+
+    
+- PHPUnit 9+
+
+-----
+
+# Binary Search Tree (Árbol Binario de Búsqueda)
+
+## Definición
+
+Un **árbol binario de búsqueda (BST)** es una estructura de datos jerárquica donde cada nodo tiene como máximo dos hijos. Para cada nodo, los valores en el subárbol izquierdo son menores y en el subárbol derecho son mayores que el valor del nodo.
+
+## Operaciones principales
+
+|Operación|Descripción|Complejidad Big O promedio|
+|---|---|---|
+|`insert()`|Inserta un nuevo valor|O(log n)|
+|`contains()`|Verifica si un valor existe en el árbol|O(log n)|
+|`inOrderTraversal()`|Devuelve los valores ordenados|O(n)|
+
+## Ejemplo de uso
+
+```php
+use DataStructures\BinarySearchTree;
+
+$bst = new BinarySearchTree();
+$bst->insert(10);
+$bst->insert(5);
+$bst->insert(15);
+
+print_r($bst->inOrderTraversal()); // [5, 10, 15]
+```
+
+## Casos de uso comunes
+
+- Estructuras jerárquicas ordenadas
+    
+- Implementaciones de diccionarios y conjuntos
+    
+- Algoritmos de búsqueda y recorrido
+    
+
+## Pruebas unitarias
+
+Este repositorio incluye pruebas con PHPUnit para verificar el comportamiento de la clase `BinarySearchTree`.
+
+```bash
+./vendor/bin/phpunit tests/BinarySearchTreeTest.php
+```
+
+## Requisitos
+
+- PHP 8.0+
+    
+- PHPUnit 9+
+
+
+
+------
+
+# MinHeap (Montículo mínimo)
+
+## Definición
+
+Un **MinHeap** es una estructura de datos basada en árbol binario donde el valor de cada nodo es menor o igual que los valores de sus hijos. El valor mínimo siempre está en la raíz.
+
+## Operaciones principales
+
+|Operación|Descripción|Complejidad Big O|
+|---|---|---|
+|`insert()`|Agrega un nuevo elemento al heap|O(log n)|
+|`extractMin()`|Elimina y retorna el valor mínimo|O(log n)|
+|`peek()`|Retorna el valor mínimo sin eliminarlo|O(1)|
+|`isEmpty()`|Verifica si el heap está vacío|O(1)|
+|`size()`|Retorna el número de elementos en el heap|O(1)|
+
+## Ejemplo de uso
+
+```php
+use DataStructures\MinHeap;
+
+$heap = new MinHeap();
+$heap->insert(10);
+$heap->insert(4);
+$heap->insert(7);
+echo $heap->extractMin(); // 4
+```
+
+## Casos de uso comunes
+
+- Implementación de colas de prioridad
+    
+- Algoritmo de Dijkstra
+    
+- Simulaciones con eventos ordenados cronológicamente
+    
+- Scheduling de procesos en sistemas operativos
+    
+
+## Pruebas unitarias
+
+Incluye pruebas con PHPUnit para asegurar el comportamiento correcto de `MinHeap`.
+
+```bash
+./vendor/bin/phpunit tests/MinHeapTest.php
+```
+
+## Requisitos
+
+- PHP 8.0+    
+- PHPUnit 9+
+
+
+------
+
+
+# Graph (Grafo)
+
+## Definición
+
+Un **grafo** es una estructura de datos que consiste en un conjunto de nodos (vértices) conectados por enlaces (aristas). Puede ser dirigido o no dirigido, y puede ser representado mediante listas de adyacencia.
+
+## Operaciones principales
+
+|Operación|Descripción|Complejidad Big O|
+|---|---|---|
+|`addVertex()`|Añade un nuevo nodo al grafo|O(1)|
+|`addEdge()`|Conecta dos vértices (bidireccionalmente)|O(1)|
+|`hasEdge()`|Verifica si existe una conexión entre dos nodos|O(n)|
+|`getAdjacencyList()`|Devuelve toda la estructura de conexión|O(1)|
+|`depthFirstTraversal()`|Recorre el grafo en profundidad desde un nodo|O(V + E)|
+
+## Ejemplo de uso
+
+```php
+use DataStructures\Graph;
+
+$graph = new Graph();
+$graph->addEdge("A", "B");
+$graph->addEdge("A", "C");
+print_r($graph->depthFirstTraversal("A")); // ["A", "B", "C"]
+```
+
+## Casos de uso comunes
+
+- Redes sociales
+    
+- Sistemas de navegación (rutas)
+    
+- Algoritmos de búsqueda (BFS, DFS)
+    
+- Análisis de dependencias
+    
+
+## Pruebas unitarias
+
+Este repositorio incluye pruebas automatizadas para verificar el correcto comportamiento de `Graph`.
+
+```bash
+./vendor/bin/phpunit tests/GraphTest.php
+```
+
+## Requisitos
+
+- PHP 8.0+
+- PHPUnit 9+
+
