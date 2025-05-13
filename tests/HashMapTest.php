@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use DataStructures\HashMap;
+use App\HashMap;
 
 class HashMapTest extends TestCase
 {

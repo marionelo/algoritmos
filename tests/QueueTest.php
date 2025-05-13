@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use DataStructures\Queue;
+use App\Queue;
 
 class QueueTest extends TestCase
 {

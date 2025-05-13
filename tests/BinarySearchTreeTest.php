@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use DataStructures\BinarySearchTree;
+use App\BinarySearchTree;
 
 class BinarySearchTreeTest extends TestCase
 {

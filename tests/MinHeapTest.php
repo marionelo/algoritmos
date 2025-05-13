@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use DataStructures\MinHeap;
+use App\MinHeap;
 
 class MinHeapTest extends TestCase
 {

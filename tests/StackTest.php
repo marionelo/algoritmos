@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use DataStructures\Stack;
+use App\Stack;
 
 class StackTest extends TestCase
 {

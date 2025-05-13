@@ -149,7 +149,7 @@ Una **pila** es una estructura de datos que sigue el principio **LIFO** (_Last I
 ## Ejemplo de uso
 
 ```php
-use DataStructures\Stack;
+use App\Stack;
 
 $stack = new Stack();
 $stack->push("uno");
@@ -203,7 +203,7 @@ Una **cola** es una estructura de datos que sigue el principio **FIFO** (*First 
 ## Ejemplo de uso
 
 ```php
-use DataStructures\Queue;
+use App\Queue;
 
 $queue = new Queue();
 $queue->enqueue("uno");
@@ -275,7 +275,7 @@ Una **lista enlazada** es una estructura de datos lineal donde cada elemento (no
 ## Ejemplo de uso
 
 ```php
-use DataStructures\LinkedList;
+use App\LinkedList;
 
 $list = new LinkedList();
 $list->insertAtBeginning("C");
@@ -334,7 +334,7 @@ Una **HashMap** es una estructura de datos que permite almacenar pares clave-val
 ## Ejemplo de uso
 
 ```php
-use DataStructures\HashMap;
+use App\HashMap;
 
 $map = new HashMap();
 $map->set("nombre", "Mario");
@@ -386,7 +386,7 @@ Un **árbol binario de búsqueda (BST)** es una estructura de datos jerárquica 
 ## Ejemplo de uso
 
 ```php
-use DataStructures\BinarySearchTree;
+use App\BinarySearchTree;
 
 $bst = new BinarySearchTree();
 $bst->insert(10);
@@ -442,7 +442,7 @@ Un **MinHeap** es una estructura de datos basada en árbol binario donde el valo
 ## Ejemplo de uso
 
 ```php
-use DataStructures\MinHeap;
+use App\MinHeap;
 
 $heap = new MinHeap();
 $heap->insert(10);
@@ -498,7 +498,7 @@ Un **grafo** es una estructura de datos que consiste en un conjunto de nodos (v�
 ## Ejemplo de uso
 
 ```php
-use DataStructures\Graph;
+use App\Graph;
 
 $graph = new Graph();
 $graph->addEdge("A", "B");

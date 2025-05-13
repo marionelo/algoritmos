@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use DataStructures\LinkedList;
+use App\LinkedList;
 
 class LinkedListTest extends TestCase
 {
